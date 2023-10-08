@@ -1,0 +1,47 @@
+.legal,
+.legal ol {
+  counter-reset: item;
+}
+
+.legal li ul {
+  margin-left: 1.5rem;
+  list-style: square;
+}
+
+.legal li ul ul {
+  list-style: disc;
+}
+
+.legal li ul ul ul {
+  list-style: circle;
+}
+
+.legal li {
+  margin: 1rem 0;
+}
+
+.legal li h5 {
+  font-weight: bold;
+  counter-increment: item;
+}
+
+.legal li h5::before {
+  content: counters(item, ".") ". ";
+}
+
+.legal li ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal li a {
+  text-decoration: underline;
+}
+
+.legal li a:hover {
+  text-decoration: none;
+}
+
+.legal ol.lower-alpha {
+  list-style: lower-alpha;
+}
